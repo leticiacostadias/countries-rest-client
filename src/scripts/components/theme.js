@@ -19,7 +19,14 @@ import templates from "../templates/theme-button";
     bodyElement.classList.toggle("light");
     themeButtonElement.innerHTML = "";
 
-    themeButtonElement.innerHTML = templates[`${newTheme}Template`];
-    currentTheme = newTheme;
+    insertButtonContent(newTheme);
   }
+
+  function insertButtonContent(theme) {
+    themeButtonElement.innerHTML = templates[`${theme}Template`];
+    currentTheme = theme;
+  }
+
+  // INIT
+  insertButtonContent(currentTheme);
 })(document);
