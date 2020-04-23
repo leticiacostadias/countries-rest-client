@@ -1,0 +1,16 @@
+.light {
+    background-color: $light-background;
+    color: $light-text;
+}
+
+.light .header {
+    background-color: $light-elements;
+}
+
+.light input,
+.light select,
+.light button,
+.light .card {
+    background-color: $light-elements;
+    color: $light-text;
+}

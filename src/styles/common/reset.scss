@@ -1,0 +1,92 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+// GERAL
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $mobile-base-font-size;
+    font-family: $font-family;
+}
+
+body {
+    font-size: $mobile-normal-text;
+    font-weight: $weight-normal;
+}
+
+ion-icon {
+    vertical-align: middle;
+}
+
+// HEADINGS
+h1 {
+    font-size: $mobile-big-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0
+}
+
+@media screen and (min-width: $mobile) {
+    html {
+        font-size: $base-font-size;
+    }
+    
+    body {
+        font-size: $normal-text;
+    }
+
+    h1 {
+        font-size: $big-text;
+    }
+}
+
+// LISTAS
+ul,
+dl,
+li,
+dd {
+    padding: 0;
+    margin: 0;
+}
+
+dt:after {
+    content: ':';
+}
+
+dd {
+    font-weight: $weight-light;
+}
+
+li {
+    list-style: none;
+}
+
+// ELEMENTOS DE FORMULÁRIO
+input,
+select,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    border: none;
+    box-shadow: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    cursor: pointer;
+}
+
+// IMAGENS
+img {
+    max-width: 100%
+}

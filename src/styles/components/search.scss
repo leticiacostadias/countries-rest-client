@@ -1,0 +1,15 @@
+.search {
+    width: 100%;
+}
+
+@media screen and (min-width: $mobile) {
+    .search {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .search {
+        margin-bottom: 2rem;
+    }
+}

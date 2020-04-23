@@ -1,0 +1,14 @@
+.card {
+    max-width: 100%;
+    border-radius: $default-radius;
+    overflow: hidden;
+}
+
+.card__thumb,
+.card__title {
+    margin-bottom: 2rem;
+}
+
+.card__content {
+    padding: 0 2.5rem 2.5rem
+}

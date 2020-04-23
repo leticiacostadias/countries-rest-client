@@ -1,12 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/index.scss">
-</head>
-<body>
-    <h1>Título</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries client</title>
+    <link rel="stylesheet" href="styles/index.scss" />
+  </head>
+  <body class="dark">
+    <header class="header">
+      <h1 class="header__title">Where in the world?</h1>
+      <button class="header__theme-button">
+        <ion-icon class="header__theme-button__icon" name="moon"></ion-icon>
+        Dark mode
+      </button>
+    </header>
+
+    <main class="main">
+      <div class="main__header">
+        <div class="main__header__item search">
+          <label class="search__label" for="search-input">
+            <ion-icon class="search__icon" name="search-outline"></ion-icon>
+            Search for a country
+          </label>
+          <input
+            class="search__input"
+            id="search-input"
+            placeholder="Search for a country"
+            type="text"
+          />
+        </div>
+
+        <div class="main__header__item filter">
+          <label class="filter__label" for="filter-select">
+            Filter by region
+          </label>
+          <select id="filter-select" class="filter__select">
+            <option value="africa" class="filter__option">Africa</option>
+            <option value="america" class="filter__option">America</option>
+            <option value="asia" class="filter__option">Asia</option>
+            <option value="europe" class="filter__option">Europa</option>
+            <option value="oceania" class="filter__option">Oceania</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="main__content">
+        <ul class="main__list">
+          <li class="country countries__item card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png"
+              alt=""
+              class="card__thumb"
+            />
+
+            <div class="card__content">
+              <h3 class="card__title">Brazil</h3>
+
+              <div class="card__description">
+                <dl class="country__details">
+                  <div class="country__data">
+                    <dt class="country__term">Population</dt>
+                    <dd class="country__definition">206.500.250</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Region</dt>
+                    <dd class="country__definition">America</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Capital</dt>
+                    <dd class="country__definition">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <li class="country countries__item card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png"
+              alt=""
+              class="card__thumb"
+            />
+
+            <div class="card__content">
+              <h3 class="card__title">Brazil</h3>
+
+              <div class="card__description">
+                <dl class="country__details">
+                  <div class="country__data">
+                    <dt class="country__term">Population</dt>
+                    <dd class="country__definition">206.500.250</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Region</dt>
+                    <dd class="country__definition">America</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Capital</dt>
+                    <dd class="country__definition">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <li class="country countries__item card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png"
+              alt=""
+              class="card__thumb"
+            />
+
+            <div class="card__content">
+              <h3 class="card__title">Brazil</h3>
+
+              <div class="card__description">
+                <dl class="country__details">
+                  <div class="country__data">
+                    <dt class="country__term">Population</dt>
+                    <dd class="country__definition">206.500.250</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Region</dt>
+                    <dd class="country__definition">America</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Capital</dt>
+                    <dd class="country__definition">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <li class="country countries__item card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png"
+              alt=""
+              class="card__thumb"
+            />
+
+            <div class="card__content">
+              <h3 class="card__title">Brazil</h3>
+
+              <div class="card__description">
+                <dl class="country__details">
+                  <div class="country__data">
+                    <dt class="country__term">Population</dt>
+                    <dd class="country__definition">206.500.250</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Region</dt>
+                    <dd class="country__definition">America</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Capital</dt>
+                    <dd class="country__definition">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+
+          <li class="country countries__item card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png"
+              alt=""
+              class="card__thumb"
+            />
+
+            <div class="card__content">
+              <h3 class="card__title">Brazil</h3>
+
+              <div class="card__description">
+                <dl class="country__details">
+                  <div class="country__data">
+                    <dt class="country__term">Population</dt>
+                    <dd class="country__definition">206.500.250</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Region</dt>
+                    <dd class="country__definition">America</dd>
+                  </div>
+
+                  <div class="country__data">
+                    <dt class="country__term">Capital</dt>
+                    <dd class="country__definition">Brasília</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>

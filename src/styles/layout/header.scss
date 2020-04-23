@@ -1,0 +1,12 @@
+.header {
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: $mobile) {
+    .header {
+        padding: 2rem 5rem;
+    }
+}

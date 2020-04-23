@@ -1,0 +1,18 @@
+// COMMON
+@import './common/fonts.scss';
+@import './common/variables.scss';
+@import './common/reset.scss';
+
+// THEME
+@import './theme/dark.scss';
+@import './theme/light.scss';
+
+// LAYOUT BÁSICO
+@import './layout/header.scss';
+@import './layout/main.scss';
+
+// COMPONENTES
+@import './components/form.scss';
+@import './components/search.scss';
+@import './components/card.scss';
+@import './components/country.scss';

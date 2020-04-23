@@ -1,0 +1,16 @@
+input,
+select {
+    display: block;
+    padding-left: 1.4rem; 
+    padding-right: 1.4rem;
+    height: 4.5rem;
+    border-radius: $default-radius;
+    width: 100%;
+}
+
+label {
+    height: 0;
+    font-size: 0;
+    display: block;
+    width: 0;
+}

@@ -1,0 +1,16 @@
+.dark {
+    background-color: $dark-background;
+    color: $dark-text;
+}
+
+.dark .header {
+    background-color: $dark-elements;
+}
+
+.dark input,
+.dark select,
+.dark button,
+.dark .card {
+    background-color: $dark-elements;
+    color: $dark-text;
+}

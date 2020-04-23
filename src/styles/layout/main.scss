@@ -1,0 +1,40 @@
+.main {
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.main__header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.main__list {
+    display: grid;
+    grid-gap: 5rem;
+    padding: 0 2.5rem;
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+    .main__list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .main {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .main__header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main__list {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+    }
+}

@@ -1,0 +1,16 @@
+.country:hover {
+    cursor: pointer;
+}
+
+.country__data:not(:last-child) {
+    margin-bottom: 1rem
+}
+
+.country__term,
+.country__definition {
+    display: inline-block;
+}
+
+.country__term {
+    margin-right: .3rem;
+}
