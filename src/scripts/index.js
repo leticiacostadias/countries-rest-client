@@ -1,3 +1,5 @@
 import "./store";
-import "./components/theme";
 import "./components/countries";
+import "./components/filters";
+
+import "./components/theme";

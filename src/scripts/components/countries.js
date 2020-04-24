@@ -33,11 +33,11 @@ import generateCountryItem from "../templates/country-item";
   }
 
   // INIT
+  countriesStore.subscribe({ event: "updateList", listener: renderCountries });
   countriesStore.subscribe({
-    event: "updateFilter",
+    event: "updateFilteredList",
     listener: renderCountries,
   });
-  countriesStore.subscribe({ event: "updateList", listener: renderCountries });
 
   fetchCountries();
 })(document);
