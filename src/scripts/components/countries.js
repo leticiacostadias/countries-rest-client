@@ -2,18 +2,30 @@ import * as countriesDAO from "../DAOs/countriesDAO";
 import generateCountryItem from "../templates/country-item";
 
 ((document) => {
+  //STORE
+  const countriesStore = window.store.countries;
+
   // QUERIES
   const countriesContainer = document.querySelector(".js-countries-countainer");
 
   // FUNCTIONS
-  async function populateCountries() {
+  async function fetchCountries() {
     // FETCH DATA
-    const allCountries = (await countriesDAO.getAll()).data;
+    const { data: allCountries } = await countriesDAO.getAll();
 
-    // COUNTRIES ELEMENTS
+    countriesStore.publish({
+      event: "updateList",
+      state: { list: allCountries },
+    });
+  }
+
+  function renderCountries({ state: countriesState }) {
+    const { list, filteredList } = countriesState;
+    const countriesList = filteredList || list;
+
     const countriesElements = [];
 
-    for (const country of allCountries) {
+    for (const country of countriesList) {
       countriesElements.push(generateCountryItem(country));
     }
 
@@ -21,5 +33,11 @@ import generateCountryItem from "../templates/country-item";
   }
 
   // INIT
-  populateCountries();
+  countriesStore.subscribe({
+    event: "updateFilter",
+    listener: renderCountries,
+  });
+  countriesStore.subscribe({ event: "updateList", listener: renderCountries });
+
+  fetchCountries();
 })(document);
