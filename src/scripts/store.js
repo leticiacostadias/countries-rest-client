@@ -7,10 +7,7 @@ const countriesStore = new PubSubStore({
   filters: { search: "", region: null },
 });
 
-const themeStore = new PubSubStore({ currentTheme: "dark" });
-
 // SETTING TO GLOBAL
 window.store = {
   countries: countriesStore,
-  theme: themeStore,
 };
