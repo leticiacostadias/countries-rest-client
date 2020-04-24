@@ -1,10 +1,9 @@
 const countryItem = ({ flag, name, population, region, capital }) => `
 <li class="country countries__item card">
-  <img
-    src="${flag}"
-    alt="${name}"
+  <div
+    style="background-image: url(${flag})"
     class="card__thumb"
-  />
+  ></div>
 
   <div class="card__content">
     <h3 class="card__title">${name}</h3>

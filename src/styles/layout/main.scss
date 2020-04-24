@@ -22,15 +22,17 @@
     }
 }
 
+@media screen and (min-width: $tablet) {
+    .main__header {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 @media screen and (min-width: $desktop) {
     .main {
         padding-left: 5rem;
         padding-right: 5rem;
-    }
-
-    .main__header {
-        justify-content: space-between;
-        align-items: center;
     }
 
     .main__list {

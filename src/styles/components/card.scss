@@ -4,6 +4,13 @@
     overflow: hidden;
 }
 
+.card__thumb {
+    height: 20rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .card__thumb,
 .card__title {
     margin-bottom: 2rem;
