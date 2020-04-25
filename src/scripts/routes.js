@@ -1,10 +1,12 @@
 import Router from "./lib/router";
 
+import HomePage from "./pages/home";
+
 ((document, window) => {
   const router = new Router([
     {
       path: "/",
-      render: () => console.log("This is the home page!"),
+      render: HomePage,
     },
     {
       path: "/:country",

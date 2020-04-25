@@ -1,5 +1,5 @@
 const countryItem = ({ flag, name, population, region, capital }) => `
-<li class="country countries__item card">
+<li class="country countries__item card" data-country="${name.toLowerCase()}">
   <div
     style="background-image: url(${flag})"
     class="card__thumb"
