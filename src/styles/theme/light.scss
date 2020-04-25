@@ -4,6 +4,7 @@
 }
 
 .light .header {
+    box-shadow: $light-box-shadow;
     background-color: $light-elements;
 }
 
@@ -11,6 +12,7 @@
 .light select,
 .light button,
 .light .card {
+    box-shadow: $light-box-shadow;
     background-color: $light-elements;
     color: $light-text;
 }

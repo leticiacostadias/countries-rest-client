@@ -4,6 +4,7 @@
 }
 
 .dark .header {
+    box-shadow: $dark-box-shadow;
     background-color: $dark-elements;
 }
 
@@ -11,6 +12,7 @@
 .dark select,
 .dark button,
 .dark .card {
+    box-shadow: $dark-box-shadow;
     background-color: $dark-elements;
     color: $dark-text;
 }

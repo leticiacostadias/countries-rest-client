@@ -1,19 +1,31 @@
 .main {
     margin: 0 auto;
     padding: 3rem 1.5rem;
+    
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+    }
+    
+    &__list {
+        display: grid;
+        grid-gap: 5rem;
+        padding: 0 2.5rem;
+    }
+
+    &__content {
+        &--details {
+            @media screen and (min-width: $desktop) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 8rem;
+            }
+        }
+    }
 }
 
-.main__header {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-}
 
-.main__list {
-    display: grid;
-    grid-gap: 5rem;
-    padding: 0 2.5rem;
-}
 
 @media screen and (min-width: $tablet) and (max-width: $desktop) {
     .main__list {
@@ -33,10 +45,11 @@
     .main {
         padding-left: 5rem;
         padding-right: 5rem;
+        
+        &__list {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0;
+        }
     }
 
-    .main__list {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 0;
-    }
 }

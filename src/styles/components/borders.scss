@@ -1,0 +1,30 @@
+.borders {
+    &__country {
+        display: inline-block;
+        font-size: $mobile-small-text;
+        margin-bottom: 1rem;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    
+    &__title {
+        font-size: $mobile-normal-text;
+        font-weight: $weight-light;
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+        &__title {
+            margin-bottom: 0;
+            margin-right: 1.5rem;
+            font-size: $normal-text;
+        }
+    }
+}

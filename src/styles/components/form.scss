@@ -14,3 +14,20 @@ label {
     display: block;
     width: 0;
 }
+
+button,
+input[type="submit"],
+input[type="button"] {
+    padding: .8rem 2.5rem;
+    font-weight: $weight-light;
+    font-size: inherit;
+    border-radius: $default-radius;
+}
+
+button.clean,
+input[type="submit"].clean,
+input[type="button"].clean {
+    box-shadow: none;
+    padding: .8rem 0;
+    background-color: transparent;
+}

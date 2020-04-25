@@ -1,0 +1,45 @@
+.article {
+  &__title {
+    margin-bottom: 2rem;
+    font-size: $mobile-big-text;
+  }
+
+  &__info {
+    &__block {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__data {
+    margin-bottom: 1rem;
+  }
+
+  &__term,
+  &__definition {
+    display: inline-block;
+  }
+
+  &__term {
+    margin-right: 0.3rem;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .article {
+    &__title {
+      font-size: $huge-text;
+    }
+
+    &__info {
+      display: grid;
+      margin-bottom: 5rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+      margin-bottom: 5rem;
+
+      &__block {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

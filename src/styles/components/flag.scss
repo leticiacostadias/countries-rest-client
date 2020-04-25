@@ -1,0 +1,12 @@
+.flag {
+    display: block;
+    margin-bottom: 5rem;        
+}
+
+
+@media screen and (min-width: $desktop) {
+    .flag {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
