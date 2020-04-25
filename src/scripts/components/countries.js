@@ -1,25 +1,47 @@
 import * as countriesDAO from "../DAOs/countriesDAO";
+import countriesTemplate from "../templates/countries";
 import generateCountryItem from "../templates/country-item";
 
-((document) => {
-  //STORE
-  const countriesStore = window.store.countries;
+class Countries {
+  constructor(rootElement) {
+    // GLOBALS
+    this.root = rootElement;
+    this.countriesStore = window.store.countries;
 
-  // QUERIES
-  const countriesContainer = document.querySelector(".js-countries-countainer");
+    // SUBSCRIBERS
+    this.countriesStore.subscribe({
+      event: "updateList",
+      listener: this.renderCountries.bind(this),
+    });
+    this.countriesStore.subscribe({
+      event: "updateFilteredList",
+      listener: this.renderCountries.bind(this),
+    });
+  }
 
-  // FUNCTIONS
-  async function fetchCountries() {
+  _getMainElements() {
+    // QUERIES
+    this.countriesContainerElement = this.root.querySelector(
+      ".js-countries-countainer"
+    );
+  }
+
+  async _fetchCountries() {
     // FETCH DATA
     const { data: allCountries } = await countriesDAO.getAll();
 
-    countriesStore.publish({
+    this.countriesStore.publish({
       event: "updateList",
       state: { list: allCountries },
     });
   }
 
-  function renderCountries({ state: countriesState }) {
+  render() {
+    this.root.innerHTML += countriesTemplate;
+    this._fetchCountries();
+  }
+
+  renderCountries({ state: countriesState }) {
     const { list, filteredList } = countriesState;
     const countriesList = filteredList || list;
 
@@ -29,15 +51,12 @@ import generateCountryItem from "../templates/country-item";
       countriesElements.push(generateCountryItem(country));
     }
 
-    countriesContainer.innerHTML = countriesElements.join("");
+    this._getMainElements();
+    this.countriesContainerElement.innerHTML = countriesElements.join("");
   }
 
-  // INIT
-  countriesStore.subscribe({ event: "updateList", listener: renderCountries });
-  countriesStore.subscribe({
-    event: "updateFilteredList",
-    listener: renderCountries,
-  });
+  // EVENT LISTENERS
+  setEventListeners() {}
+}
 
-  fetchCountries();
-})(document);
+export default Countries;

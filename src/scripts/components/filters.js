@@ -1,27 +1,26 @@
-(() => {
-  // STORE
-  const countriesStore = window.store.countries;
+import filterTemplate from "../templates/filter";
 
-  // QUERIES
-  const searchInput = document.querySelector(".js-search-input");
-  const regionSelect = document.querySelector(".js-region-select");
+class Filters {
+  constructor(rootElement) {
+    // GLOBALS
+    this.root = rootElement;
+    this.countriesStore = window.store.countries;
 
-  // FUNCTIONS
-  const updateFilter = (filterName) => ({ target: { value } }) => {
-    const { filters: currentFilters } = countriesStore.getState();
-    const newState = { filters: { ...currentFilters, [filterName]: value } };
+    // SUBSCRIPTIONS
+    this.countriesStore.subscribe({
+      event: "updateFilter",
+      listener: this._updateFilteredList.bind(this),
+    });
+  }
 
-    countriesStore.publish({ event: "updateFilter", state: newState });
-  };
-
-  function updateFilteredList({ state }) {
+  _updateFilteredList({ state }) {
     const {
       list: countriesList,
       filters: { search, region },
     } = state;
 
     if (!search && !region) {
-      countriesStore.publish({
+      this.countriesStore.publish({
         event: "updateFilteredList",
         state: { filteredList: null },
       });
@@ -36,19 +35,46 @@
       return matchSearch && matchRegion;
     });
 
-    countriesStore.publish({
+    this.countriesStore.publish({
       event: "updateFilteredList",
       state: { filteredList },
     });
   }
 
-  // EVENT LISTENERS
-  searchInput.addEventListener("input", updateFilter("search"));
-  regionSelect.addEventListener("change", updateFilter("region"));
+  _getMainElements() {
+    // QUERIES
+    this.searchInputElement = this.root.querySelector(".js-search-input");
+    this.regionSelectElement = this.root.querySelector(".js-region-select");
+  }
 
-  // SUBSCRIPTIONS
-  countriesStore.subscribe({
-    event: "updateFilter",
-    listener: updateFilteredList,
-  });
-})(document, window);
+  _updateFilter(filterName) {
+    return ({ target: { value } }) => {
+      const { filters: currentFilters } = this.countriesStore.getState();
+      const newState = { filters: { ...currentFilters, [filterName]: value } };
+
+      this.countriesStore.publish({ event: "updateFilter", state: newState });
+    };
+  }
+
+  render() {
+    this.root.innerHTML += filterTemplate;
+  }
+
+  // EVENT LISTENERS
+  setEventListeners() {
+    // UPDATE ELEMENTS
+    this._getMainElements();
+
+    this.searchInputElement.addEventListener(
+      "input",
+      this._updateFilter("search")
+    );
+
+    this.regionSelectElement.addEventListener(
+      "change",
+      this._updateFilter("region")
+    );
+  }
+}
+
+export default Filters;
