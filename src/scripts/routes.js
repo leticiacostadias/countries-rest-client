@@ -1,6 +1,7 @@
 import Router from "./lib/router";
 
 import HomePage from "./pages/home";
+import CountryDetailsPage from "./pages/country-details";
 
 ((document, window) => {
   const router = new Router([
@@ -10,8 +11,7 @@ import HomePage from "./pages/home";
     },
     {
       path: "/:country",
-      render: ({ country }) =>
-        console.log(`This is the ${country} details page`),
+      render: CountryDetailsPage,
     },
     {
       path: "*",

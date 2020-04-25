@@ -44,6 +44,10 @@ class Router {
     if (matchingRoute) matchingRoute.render(routeData);
   }
 
+  goBack() {
+    window.history.back();
+  }
+
   getState() {
     return window.history.state;
   }
