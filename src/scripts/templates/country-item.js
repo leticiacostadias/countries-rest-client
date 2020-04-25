@@ -12,7 +12,9 @@ const countryItem = ({ flag, name, population, region, capital }) => `
       <dl class="country__details">
         <div class="country__data">
           <dt class="country__term">Population</dt>
-          <dd class="country__definition">${population}</dd>
+          <dd class="country__definition">${Number(
+            population
+          ).toLocaleString()}</dd>
         </div>
 
         <div class="country__data">
