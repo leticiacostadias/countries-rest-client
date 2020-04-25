@@ -3,6 +3,7 @@ import Filters from "../components/filters";
 
 function HomePage() {
   const root = document.getElementById("root");
+  root.innerHTML = "";
 
   console.log(root);
 
@@ -13,7 +14,6 @@ function HomePage() {
   CountriesComponent.render();
 
   FiltersComponent.setEventListeners();
-  CountriesComponent.setEventListeners();
 }
 
 export default HomePage;

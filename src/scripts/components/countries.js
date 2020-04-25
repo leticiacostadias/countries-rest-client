@@ -26,6 +26,16 @@ class Countries {
     );
   }
 
+  _handleClickCountry({ target }) {
+    const countryElement = target.closest(".country");
+
+    if (!countryElement) return;
+
+    const selectedCountry = countryElement.dataset.country;
+
+    window.router.goTo(selectedCountry);
+  }
+
   async _fetchCountries() {
     // FETCH DATA
     const { data: allCountries } = await countriesDAO.getAll();
@@ -53,10 +63,17 @@ class Countries {
 
     this._getMainElements();
     this.countriesContainerElement.innerHTML = countriesElements.join("");
+
+    this._setEventListeners();
   }
 
   // EVENT LISTENERS
-  setEventListeners() {}
+  _setEventListeners() {
+    this.countriesContainerElement.addEventListener(
+      "click",
+      this._handleClickCountry.bind(this)
+    );
+  }
 }
 
 export default Countries;
