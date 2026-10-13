@@ -1,7 +1,9 @@
+@use "../common/variables";
+
 .article {
   &__title {
     margin-bottom: 2rem;
-    font-size: $mobile-big-text;
+    font-size: variables.$mobile-big-text;
   }
 
   &__info {
@@ -24,10 +26,10 @@
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: variables.$desktop) {
   .article {
     &__title {
-      font-size: $huge-text;
+      font-size: variables.$huge-text;
     }
 
     &__info {

@@ -1,6 +1,8 @@
+@use "../common/variables";
+
 .card {
     max-width: 100%;
-    border-radius: $default-radius;
+    border-radius: variables.$default-radius;
     overflow: hidden;
 }
 

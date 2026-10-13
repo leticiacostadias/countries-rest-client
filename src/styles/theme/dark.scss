@@ -1,18 +1,20 @@
+@use "../common/variables";
+
 .dark {
-    background-color: $dark-background;
-    color: $dark-text;
+    background-color: variables.$dark-background;
+    color: variables.$dark-text;
 }
 
 .dark .header {
-    box-shadow: $dark-box-shadow;
-    background-color: $dark-elements;
+    box-shadow: variables.$dark-box-shadow;
+    background-color: variables.$dark-elements;
 }
 
 .dark input,
 .dark select,
 .dark button,
 .dark .card {
-    box-shadow: $dark-box-shadow;
-    background-color: $dark-elements;
-    color: $dark-text;
+    box-shadow: variables.$dark-box-shadow;
+    background-color: variables.$dark-elements;
+    color: variables.$dark-text;
 }

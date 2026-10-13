@@ -1,3 +1,5 @@
+@use "../common/variables";
+
 .header {
     padding: 3rem 1.5rem;
     display: flex;
@@ -5,7 +7,7 @@
     align-items: center;
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: variables.$mobile) {
     .header {
         padding: 2rem 5rem;
     }

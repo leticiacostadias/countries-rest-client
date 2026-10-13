@@ -1,18 +1,20 @@
+@use "../common/variables";
+
 .light {
-    background-color: $light-background;
-    color: $light-text;
+    background-color: variables.$light-background;
+    color: variables.$light-text;
 }
 
 .light .header {
-    box-shadow: $light-box-shadow;
-    background-color: $light-elements;
+    box-shadow: variables.$light-box-shadow;
+    background-color: variables.$light-elements;
 }
 
 .light input,
 .light select,
 .light button,
 .light .card {
-    box-shadow: $light-box-shadow;
-    background-color: $light-elements;
-    color: $light-text;
+    box-shadow: variables.$light-box-shadow;
+    background-color: variables.$light-elements;
+    color: variables.$light-text;
 }

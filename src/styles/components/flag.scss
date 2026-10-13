@@ -1,10 +1,12 @@
+@use "../common/variables";
+
 .flag {
     display: block;
     margin-bottom: 5rem;        
 }
 
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: variables.$desktop) {
     .flag {
         margin-bottom: 0;
         width: 100%;

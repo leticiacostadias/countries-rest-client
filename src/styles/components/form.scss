@@ -1,10 +1,12 @@
+@use "../common/variables";
+
 input,
 select {
     display: block;
     padding-left: 1.4rem; 
     padding-right: 1.4rem;
     height: 4.5rem;
-    border-radius: $default-radius;
+    border-radius: variables.$default-radius;
     width: 100%;
 }
 
@@ -19,9 +21,9 @@ button,
 input[type="submit"],
 input[type="button"] {
     padding: .8rem 2.5rem;
-    font-weight: $weight-light;
+    font-weight: variables.$weight-light;
     font-size: inherit;
-    border-radius: $default-radius;
+    border-radius: variables.$default-radius;
 }
 
 button.clean,

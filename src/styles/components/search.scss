@@ -1,14 +1,16 @@
+@use "../common/variables";
+
 .search {
     width: 100%;
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: variables.$mobile) {
     .search {
         width: 30rem;
     }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: variables.$mobile) {
     .search {
         margin-bottom: 2rem;
     }
