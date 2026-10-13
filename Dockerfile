@@ -1,12 +1,12 @@
-FROM node
+FROM node:20
 
 WORKDIR /app
 
-ENV NODE_ENV=production COUNTRIES_API=https://restcountries.eu
+ENV NODE_ENV=production
 
 COPY . .
 
-RUN npm install
+RUN npm install && npm install -g parcel
 
 EXPOSE 1234 1234
 

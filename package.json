@@ -4,17 +4,17 @@
   "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel src/index.html"
+    "start": "parcel src/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.3"
   },
   "dependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
     "parcel": "^2.16.4"
   }
 }
